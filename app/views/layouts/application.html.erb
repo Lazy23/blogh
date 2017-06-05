@@ -9,7 +9,12 @@
   </head>
 
   <body>
-  	<h1>Application layout</h1>
-    <%= yield %>
+    <%= render 'header' %>
+
+    <dir class="container">
+      <%= yield %>
+    </dir>
+
+    <%= render 'footer' %>
   </body>
 </html>
