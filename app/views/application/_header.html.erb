@@ -1,7 +1,8 @@
 <div class="blog-masthead">
   <div class="container">
     <nav class="blog-nav">
-      <a class="blog-nav-item active" href="/">Home</a>
+      <%= link_to 'Home', home_path, class: 'blog-nav-item active' %>
+      <%= link_to 'Posts', posts_path, class: 'blog-nav-item' %>
     </nav>
   </div>
 </div>
