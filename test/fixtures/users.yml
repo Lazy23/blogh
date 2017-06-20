@@ -4,6 +4,6 @@ one:
   email: MyString@gmail.com
   password_digest: <%= BCrypt::Password.create('secret') %>
 
-two:
+client:
   email: MyString@notgmail.com
   password_digest: <%= BCrypt::Password.create('secret') %>

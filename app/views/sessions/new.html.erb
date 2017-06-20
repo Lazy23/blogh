@@ -1,0 +1,18 @@
+<%= form_tag '/login', class: 'form-signin' do %>
+  <h2 class="form-signin-heading">Please sign in</h2>
+
+  <%= label_tag 'email', nil, class: 'sr-only' %>
+  <%= email_field_tag :email, params[:email], class: 'form-control', placeholder: 'Email', required: true, autofocus: true, id: 'first' %>
+
+  <%= label_tag 'password', nil, class: 'sr-only' %>
+  <%= password_field_tag :password, params[:password], class: 'form-control', placeholder: 'Password', required: true, id: 'last' %>
+
+  <div class="checkbox">
+    <label>
+      <%= check_box_tag 'Remember me'%>
+      <%= 'Remember me' %>
+    </label>
+  </div>
+
+  <%= submit_tag 'Sign in', class: 'btn btn-lg btn-primary btn-block'%>
+<% end %>
