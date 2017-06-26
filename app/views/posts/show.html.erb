@@ -1,12 +1,21 @@
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="container">
+  <div class="blog-header">
+    <h1 class="blog-title"><%= @post.title%>
 
+    </h1>
+  </div>
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+          <div class="blog-post">
 <p>
-  <strong>Body:</strong>
+  <div class="blog_post_body">
   <%= @post.body %>
+  <br>
 </p>
-
-<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-default' %>
+  </div>
+<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary' if signed_in? %>
 <%= link_to 'Back', posts_path, class: 'btn btn-default' %>
+          </div>
+        </div>
+      </div>
+</div>

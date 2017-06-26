@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  skip_before_action :authorize, except: :destroy
   # GET /login
   def new
     # render :new
